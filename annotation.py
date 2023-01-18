@@ -20,6 +20,10 @@ class Annotation:
                f"x2={self.x2}, y2={self.y2}, " \
                f"eye_y={self.eye_y})"
 
+    @property
+    def aspect_ratio(self):
+        return self.w / self.h
+
 def load(filename):
     path = Path(filename)
     anno_path = path.with_suffix(".txt")
